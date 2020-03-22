@@ -18,7 +18,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `PANTAU COVID-19`,
         short_name: `COVID19 ID`,
         start_url: `/`,
         background_color: `#212121`,
