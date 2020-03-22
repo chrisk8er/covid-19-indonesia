@@ -10,12 +10,25 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 
 // MATERIAL UI
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
+import grey from '@material-ui/core/colors/grey'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import Link from '@material-ui/core/Link'
 
 import Header from './header'
 import './layout.css'
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: grey[900],
+    },
+    // secondary: {
+    //   main: '#d81b60',
+    // },
+  },
+})
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -29,7 +42,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Header siteTitle={data.site.siteMetadata.title} />
       <Container maxWidth="sm">
         <main>{children}</main>
@@ -41,7 +54,7 @@ const Layout = ({ children }) => {
           </Typography>
         </footer>
       </Container>
-    </>
+    </ThemeProvider>
   )
 }
 
