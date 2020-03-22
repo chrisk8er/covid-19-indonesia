@@ -1,10 +1,14 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "covid-19-indonesia",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Visual information about corona virus in Indonesia",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Krestian Weken <chrisk8er@gmail.com>",
   "dependencies": {
+    "@material-ui/core": "^4.9.7",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.46",
+    "axios": "^0.19.2",
     "gatsby": "^2.19.45",
     "gatsby-image": "^2.2.44",
     "gatsby-plugin-manifest": "^2.2.48",
