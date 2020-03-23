@@ -75,6 +75,9 @@ const IndexPage = () => {
         <Grid container spacing={3}>
           <Grid item xs={12}>
             <TopInfo />
+            <Typography variant="h6" gutterBottom>
+              Kasus di Indonesia:
+            </Typography>
             <MainPanel data={status} />
           </Grid>
 
